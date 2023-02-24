@@ -1,0 +1,38 @@
+
+body{
+    background-color: aqua;
+}
+
+.all{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container{
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+max-width: 300px;
+background-color: rgb(11, 44, 105);
+padding: 16px;
+margin-right: 10px;
+border-radius: 10px;
+text-align: center;
+color: white;
+border: solid 3px black;
+box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.548);
+}
+ 
+
+input{
+    display: block;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+p{
+    font-size: 20px;
+    color: black;
+ }
+
