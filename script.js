@@ -28,19 +28,19 @@ function calcular() {
     let inpultCriancas = document.getElementById("criancas").value;
     let inpultDuracao = document.getElementById("duracao").value;
     let resultado = document.getElementById("resultado");
-   
+
 
     let adulto = inpultAdultos;
     let crianca = inpultCriancas;
     let duracao = inpultDuracao;
-  
+
 
     let qtdtCarne = carnePp(duracao) * adulto + (carnePp(duracao) / 2 * crianca);
     let qtdtcerveja = cerverjaPp(duracao) * adulto;
     let qtdtbebida = BebidaPp(duracao) * adulto + (BebidaPp(duracao) / 2 * crianca);
 
 
-    resultado.innerHTML=` <style>.container2{
+    resultado.innerHTML = ` <style>.container2{
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         max-width: 300px;
         background-color: gold;
@@ -52,26 +52,26 @@ function calcular() {
         box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.548);        
         }</style>`
     resultado.innerHTML += `<h2 class="result-info">Você vai precisar de:</h2>`
-    resultado.innerHTML+=`<img style="max-width: 150px;" src="https://imagensemoldes.com.br/wp-content/uploads/2020/06/Figura-Carne-PNG.png">`
-    resultado.innerHTML += `<p> ${qtdtCarne} g de Carne </p>`;
-    resultado.innerHTML+=`<img style="max-width: 100px;" src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Ilustra%C3%A7%C3%A3o-Cerveja-PNG-1024x814.png">`
-    resultado.innerHTML += `<p> ${qtdtcerveja} ml de Cerveja </p>`;
-    resultado.innerHTML+=`<img style="max-width: 100px;" src="https://www.pngkit.com/png/full/403-4034489_rtulos-imagens-de-refrigerante-e-agua.png">`
-    resultado.innerHTML += `<p> ${qtdtbebida} ml de Bebidas </p>`;
+    resultado.innerHTML += `<img style="max-width: 150px;" src="https://imagensemoldes.com.br/wp-content/uploads/2020/06/Figura-Carne-PNG.png">`
+    resultado.innerHTML += `<p> ${qtdtCarne / 1000} kilos de Carne </p>`;
+    resultado.innerHTML += `<img style="max-width: 100px;" src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Ilustra%C3%A7%C3%A3o-Cerveja-PNG-1024x814.png">`
+    resultado.innerHTML += `<p> ${Math.ceil(qtdtcerveja / 355)} Latas de Cerveja </p>`;
+    resultado.innerHTML += `<img style="max-width: 100px;" src="https://www.pngkit.com/png/full/403-4034489_rtulos-imagens-de-refrigerante-e-agua.png">`
+    resultado.innerHTML += `<p> ${Math.ceil(qtdtbebida / 2000)} Litros de Refrigerante </p>`;
 
 }
 
 function novo() {
 
-    let inpultAdultos = document.getElementById("adultos").value="";
-    let inpultCriancas = document.getElementById("criancas").value="";
-    let inpultDuracao = document.getElementById("duracao").value="";
+    let inpultAdultos = document.getElementById("adultos").value = "";
+    let inpultCriancas = document.getElementById("criancas").value = "";
+    let inpultDuracao = document.getElementById("duracao").value = "";
 
     resultado.innerHTML = ""
 
 }
 
-function verificar(){
+function verificar() {
     let inpultAdultos = document.getElementById("adultos").value;
     let inpultCriancas = document.getElementById("criancas").value;
     let inpultDuracao = document.getElementById("duracao").value;
@@ -79,18 +79,18 @@ function verificar(){
     let adulto = inpultAdultos;
     let crianca = inpultCriancas;
     let duracao = inpultDuracao;
-     if(adulto==""){
+    if (adulto == "") {
         alert("Informe quantos Adultos iram ao churrasco!");
         Selection.document.getElementById("adultos");
-     }else if(crianca==""){
+    } else if (crianca == "") {
         alert("Informe quantas Crianças iram ao churrasco!");
         Selection.document.getElementById("adultos");
-     }else if(duracao==""){
+    } else if (duracao == "") {
         alert("Informe qual a duração do churrasco!");
         Selection.document.getElementById("adultos");
-     }else{
+    } else {
         calcular();
-     }
-       
-     
+    }
+
+
 }
