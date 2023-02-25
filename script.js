@@ -54,9 +54,9 @@ function calcular() {
     resultado.innerHTML += `<h2 class="result-info">Você vai precisar de:</h2>`
     resultado.innerHTML += `<img style="max-width: 150px;" src="https://imagensemoldes.com.br/wp-content/uploads/2020/06/Figura-Carne-PNG.png">`
     resultado.innerHTML += `<p> ${qtdtCarne / 1000} kilos de Carne </p>`;
-    resultado.innerHTML += `<img style="max-width: 100px;" src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Ilustra%C3%A7%C3%A3o-Cerveja-PNG-1024x814.png">`
+    resultado.innerHTML += `<img style="max-width: 150px;" src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Ilustra%C3%A7%C3%A3o-Cerveja-PNG-1024x814.png">`
     resultado.innerHTML += `<p> ${Math.ceil(qtdtcerveja / 355)} Latas de Cerveja </p>`;
-   resultado.innerHTML += `<img style="max-width: 100px;" src="./refrigerante-e-agua.png">`
+    resultado.innerHTML += `<img style="max-width: 100px;" src="./refrigerante-e-agua.png">`
     resultado.innerHTML += `<p> ${Math.ceil(qtdtbebida / 2000)} Litros de Refrigerante </p>`;
 
 }
